@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: white;
+
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    padding: 8px 8%;
+    background-image: url(images/back.png);
+    background-color: transparent;
+    position: relative;
+}
+nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 9pxpx 0;
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+nav button{
+border: 0;
+outline: 0;
+background: #db0001;
+color: #fff;
+padding: 10px 18px;
+font-size: 15px;
+border-radius: 5px;
+margin-left: 12px;
+cursor: pointer;
+}
+.lang-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 8px 12px;
+}
+.lang-btn img{
+width: 12px;
+margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 55px;
+    line-height: 50px;
+    font-weight:500;
+    max-width: 600px;
+}
+
+.header-content h3{
+    font-weight: 450;
+    margin-bottom: 20px;  
+}
+.email-sign{
+background: #fff;
+border-radius: 5px;
+display: flex;
+align-items: center;
+margin-top: 30px;
+overflow: hidden;
+}
+.email-sign input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-sign button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 18px 25px;
+}
+.features{
+padding: 50px 12%;
+font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 22px;
+}  
+.img-col img{
+display: block;
+width: 90%;
+margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.faq{
+padding: 10px 12%;
+text-align: center;
+font-size: 18px;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+
+}
+.pop{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+
+}
+.pop li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    
+
+}
+.pop li label{
+    display: flex;
+    align-items: center;
+    padding: 22px;
+    font-size: 20px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]
+{
+    display: none;
+}
+.pop .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.pop input[type="radio"]:checked +label+.content{
+max-height: 600px;
+padding: 30px 20px;
+}
+.faq .email-sign{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small
+{
+    font-size: 20px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 8px solid #333;
+    color:#777;
+}
+.footer h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.footer.row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .lang-btn{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.part
+{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-top: 10px;
+}
+@media only screen and (max-width:600px)
+{
+    .logo{
+        width: 100px;
+    }
+    nav button {
+        padding: 5px 10px;
+    }
+    nav .lang-btn{
+        padding: 5px 8px;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+.header-content h1{
+    font-size: 30px;
+}
+.email-sign button{
+font-size: 12px;
+padding: 10px 15px;
+}
+.text-col, .img-col{
+    flex-basis: 100%;
+}
+.features h2{
+    font-size: 30px;
+}
+.features p{
+    font-size: 15px;
+}
+ .row:nth-child(2), .row:nth-child(4){
+    flex-direction: column-reverse;
+ }
+ .features.row{
+    padding: 10px 0;
+ }
+ .faq h2{
+    font-size: 20px;
+ }
+ .pop .content{
+    font-size: 14px;
+ }
+ .pop li  label{
+padding: 10px;
+font-size: 14px;
+ }
+ label::after{
+    font-size: 20px;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
